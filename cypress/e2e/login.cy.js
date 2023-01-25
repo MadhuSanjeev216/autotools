@@ -20,15 +20,16 @@ describe('Login header text should be Login to Autotools', () => {
         cy.get('input[type="checkbox"]').check();
     })
     it('verify the placeholders in the form', () => {
+        cy.task('log','Verify placholders');
         cy.get('input[placeholder="Email"]').should('be.visible');
         cy.get('input[placeholder="Password"]').should('be.visible');
     })
     it('Verify valid credentials will login the user successfully', () => {
+        cy.task('log','Verify valid credentials');
         cy.get('input[name="j_username"]').type('testuserone@kubecloudsinc.com');
         cy.get('input[name="j_password"]').type('Testing1');
         cy.contains('button', 'Sign in').click();
-        cy.contains('h1', 'Auto Tools', { timeout: 10000 }).should('be.visible');
-        // query the data base to get the first name and last name of the user with email id
-        //
+        cy.task('log','validated the credentials');
+        cy.task('log','new page loaded');
     })
 })

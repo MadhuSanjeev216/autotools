@@ -28,5 +28,6 @@ module.exports = defineConfig({
         return launchOptions
       })
     },
+    specPattern: 'cypress/e2e/home_navbar.cy.js'
   },
 })
