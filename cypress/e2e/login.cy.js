@@ -15,6 +15,10 @@ describe('Login header text should be Login to Autotools', () => {
             .should('have.text', 'Email');
         cy.get('ul li').should('have.length', 1).eq(0).should('have.text', 'Login');
     })
+    it('verify the placeholders in the form', () => {
+        cy.get('input[placeholder="Email"]').should('be.visible');
+        cy.get('input[placeholder="Password"]').should('be.visible');
+    })
     it('Verify valid credentials will login the user successfully', () => {
         cy.get('input[name="j_username"]').type('testuserone@kubecloudsinc.com');
         cy.get('input[name="j_password"]').type('Testing1');
