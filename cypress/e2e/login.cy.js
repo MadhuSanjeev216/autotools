@@ -14,6 +14,10 @@ describe('Login header text should be Login to Autotools', () => {
             .should('be.visible')
             .should('have.text', 'Email');
         cy.get('ul li').should('have.length', 1).eq(0).should('have.text', 'Login');
+        cy.get('label[class="checkbox"]')
+              .should('have.text','  Remember me\n\t\t\t\t\t')
+           // .contains('normalize-space(text)','Remember me\n\t\t\t\t\t');
+        cy.get('input[type="checkbox"]').check();
     })
     it('verify the placeholders in the form', () => {
         cy.get('input[placeholder="Email"]').should('be.visible');
