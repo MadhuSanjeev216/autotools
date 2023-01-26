@@ -8,5 +8,8 @@ describe('verify region page', () =>{
     })
     it('Validating the fields of the page', () =>{
         cy.task('log','verify all region entries');
+        cy.get('h1').should('be.visible').should('have.text','Regions');
+        cy.get('th[class="number"]').should('have.text','Id');
+        // cy.get('th[class=\'number\']/following-sibling::*')
     })
 })
