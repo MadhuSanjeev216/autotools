@@ -20,6 +20,5 @@ describe('verify region page', () =>{
         cy.get('td a').eq(1); 
         cy.get('td a').eq(2);
         cy.get('td a').last();
-    //hi to check git commit msg
     })
 })
