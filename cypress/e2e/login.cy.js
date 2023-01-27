@@ -5,6 +5,7 @@ describe('Login header text should be Login to Autotools', () => {
             cy.task('log', 'Opened the url');
             cy.contains('h1','Login to Auto Tools').should('be.visible');
             cy.task('log', 'validated the header');
+            cy.task('log', 'validated the footer');
         })
     });
     it('verify form fields', () => {
