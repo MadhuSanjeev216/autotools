@@ -28,6 +28,6 @@ module.exports = defineConfig({
         return launchOptions
       })
     },
-    specPattern: 'cypress/e2e/europeRegion.cy.js'
+    specPattern: 'cypress/e2e/employeeDetails.cy.js'
   },
 })
