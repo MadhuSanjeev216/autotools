@@ -27,6 +27,10 @@ Cypress.Commands.add('login', (email, password) => {
 })
 //
 //
+Cypress.Commands.add('pageValidator',()=>{
+        cy.task('log','Validating the page header');
+        cy.get('h1').should('be.visible');
+})
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
