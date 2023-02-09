@@ -27,14 +27,24 @@ describe("verify the employee details page", () => {
       cy.get("td.number a").eq(i).click();
       cy.get("h1").then(($verifyName) => {
         expect(name).to.contain($verifyName.text());
-        // if(name==$verifyName.text()) {
-        //     cy.task('log','Valid');
-        // }
-        // else {
-        //     cy.task('log','Not Valid');
-        //     console.error('Not a Valid Name')
-        // }
       });
+      cy.go("back");
+    }
+  }); 
+  it("verify Email details of Employee from summary page to detail page", () => {
+    for (let idCount = 0; idCount <= 106; idCount++) {
+      let email
+      cy.get("td.number+td+td+td")
+        .eq(idCount)
+        .then(($email) => {
+          email = $email.text();
+        });
+      cy.get("td.number a").eq(idCount).click();
+      cy.get("tr td+td+td+td")
+        .eq(0)
+        .then(($verifyEmail) => {
+          expect(email).to.contain($verifyEmail.text());
+        });
       cy.go("back");
     }
   });
