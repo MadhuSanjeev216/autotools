@@ -9,7 +9,6 @@ describe("verify the employee details page", () => {
     //    cy.request("/").its('body')
     //    .then(html=>{
     //         const $employee1 = Cypress.$(html).css('th','number').text();
-    //    })
   });
   it("Verify first name in both summary page and employee page", () => {
     for (let i = 0; i <= 106; i++) {
